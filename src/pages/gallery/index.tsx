@@ -100,6 +100,8 @@ import { User } from 'types/user';
 import { getData, LS_KEYS } from 'utils/storage/localStorage';
 import { CenteredFlex } from 'components/Container';
 import { checkConnectivity } from 'utils/error/ui';
+import UploadTypeSelector from 'components/Upload/UploadTypeSelector';
+import uploadClient from 'services/upload/client';
 
 export const DeadCenter = styled('div')`
     flex: 1;
@@ -227,8 +229,6 @@ export default function Gallery() {
         useState<Set<number>>();
 
     const showPlanSelectorModal = () => setPlanModalView(true);
-
-    const [uploadTypeSelectorView, setUploadTypeSelectorView] = useState(false);
 
     const [sidebarView, setSidebarView] = useState(false);
 
@@ -579,7 +579,8 @@ export default function Gallery() {
     };
 
     const openUploader = () => {
-        setUploadTypeSelectorView(true);
+        uploadClient.uploadFiles();
+        // setUploadTypeSelectorView(true);
     };
 
     const closeCollectionSelector = () => {
@@ -660,39 +661,38 @@ export default function Gallery() {
                     setPhotoListHeader={setPhotoListHeader}
                 />
 
-                <Uploader
-                    syncWithRemote={syncWithRemote}
-                    showCollectionSelector={setCollectionSelectorView.bind(
-                        null,
-                        true
-                    )}
-                    closeUploadTypeSelector={setUploadTypeSelectorView.bind(
-                        null,
-                        false
-                    )}
-                    setCollectionSelectorAttributes={
-                        setCollectionSelectorAttributes
-                    }
-                    closeCollectionSelector={setCollectionSelectorView.bind(
-                        null,
-                        false
-                    )}
-                    setLoading={setBlockingLoad}
-                    setCollectionNamerAttributes={setCollectionNamerAttributes}
-                    setShouldDisableDropzone={setShouldDisableDropzone}
-                    setFiles={setFiles}
-                    setCollections={setCollections}
-                    isFirstUpload={
-                        !hasNonSystemCollections(collectionSummaries)
-                    }
-                    webFileSelectorFiles={webFileSelectorFiles}
-                    webFolderSelectorFiles={webFolderSelectorFiles}
-                    dragAndDropFiles={dragAndDropFiles}
-                    uploadTypeSelectorView={uploadTypeSelectorView}
-                    showUploadFilesDialog={openFileSelector}
-                    showUploadDirsDialog={openFolderSelector}
-                    showSessionExpiredMessage={showSessionExpiredMessage}
-                />
+                <UploadTypeSelector>
+                    <Uploader
+                        syncWithRemote={syncWithRemote}
+                        showCollectionSelector={setCollectionSelectorView.bind(
+                            null,
+                            true
+                        )}
+                        setCollectionSelectorAttributes={
+                            setCollectionSelectorAttributes
+                        }
+                        closeCollectionSelector={setCollectionSelectorView.bind(
+                            null,
+                            false
+                        )}
+                        setLoading={setBlockingLoad}
+                        setCollectionNamerAttributes={
+                            setCollectionNamerAttributes
+                        }
+                        setShouldDisableDropzone={setShouldDisableDropzone}
+                        setFiles={setFiles}
+                        setCollections={setCollections}
+                        isFirstUpload={
+                            !hasNonSystemCollections(collectionSummaries)
+                        }
+                        webFileSelectorFiles={webFileSelectorFiles}
+                        webFolderSelectorFiles={webFolderSelectorFiles}
+                        dragAndDropFiles={dragAndDropFiles}
+                        showUploadFilesDialog={openFileSelector}
+                        showUploadDirsDialog={openFolderSelector}
+                        showSessionExpiredMessage={showSessionExpiredMessage}
+                    />
+                </UploadTypeSelector>
                 <Sidebar
                     collectionSummaries={collectionSummaries}
                     sidebarView={sidebarView}

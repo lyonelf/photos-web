@@ -38,12 +38,7 @@ import {
     UPLOAD_STRATEGY,
     PICKED_UPLOAD_TYPE,
 } from 'constants/upload';
-import importService from 'services/importService';
-import {
-    getDownloadAppMessage,
-    getRootLevelFileWithFolderNotAllowMessage,
-} from 'utils/ui';
-import UploadTypeSelector from './UploadTypeSelector';
+import { getRootLevelFileWithFolderNotAllowMessage } from 'utils/ui';
 import {
     filterOutSystemFiles,
     getImportSuggestion,
@@ -59,13 +54,14 @@ import {
     getPublicCollectionUploaderName,
     savePublicCollectionUploaderName,
 } from 'services/publicCollectionService';
+import { UploadTypeSelectorContext } from 'contexts/uploadTypeSelector';
+import UploadClient from 'services/upload/client';
 
 const FIRST_ALBUM_NAME = 'My First Album';
 
 interface Props {
     syncWithRemote: (force?: boolean, silent?: boolean) => Promise<void>;
     closeCollectionSelector?: () => void;
-    closeUploadTypeSelector: () => void;
     setCollectionSelectorAttributes?: SetCollectionSelectorAttributes;
     setCollectionNamerAttributes?: SetCollectionNamerAttributes;
     setLoading: SetLoading;
@@ -74,7 +70,7 @@ interface Props {
     setFiles: SetFiles;
     setCollections?: SetCollections;
     isFirstUpload?: boolean;
-    uploadTypeSelectorView: boolean;
+
     showSessionExpiredMessage: () => void;
     showUploadFilesDialog: () => void;
     showUploadDirsDialog: () => void;
@@ -91,6 +87,8 @@ export default function Uploader(props: Props) {
     const publicCollectionGalleryContext = useContext(
         PublicCollectionGalleryContext
     );
+
+    const uploadTypeSelectorContext = useContext(UploadTypeSelectorContext);
 
     const [uploadProgressView, setUploadProgressView] = useState(false);
     const [uploadStage, setUploadStage] = useState<UPLOAD_STAGES>(
@@ -149,6 +147,13 @@ export default function Uploader(props: Props) {
         setUserNameInputDialogView(false);
         uploadRunning.current = false;
     };
+
+    useEffect(() => {
+        UploadClient.init(
+            uploadTypeSelectorContext,
+            publicCollectionGalleryContext
+        );
+    }, []);
 
     useEffect(() => {
         uploadManager.init(
@@ -269,7 +274,6 @@ export default function Uploader(props: Props) {
                 return;
             }
             uploadRunning.current = true;
-            props.closeUploadTypeSelector();
             props.setLoading(true);
             if (webFiles?.length > 0) {
                 // File selection by drag and drop or selection of file.
@@ -654,53 +658,48 @@ export default function Uploader(props: Props) {
         }
     };
 
-    const handleDesktopUpload = async (type: PICKED_UPLOAD_TYPE) => {
-        let files: ElectronFile[];
-        pickedUploadType.current = type;
-        if (type === PICKED_UPLOAD_TYPE.FILES) {
-            files = await ImportService.showUploadFilesDialog();
-        } else if (type === PICKED_UPLOAD_TYPE.FOLDERS) {
-            files = await ImportService.showUploadDirsDialog();
-        } else {
-            const response = await ImportService.showUploadZipDialog();
-            files = response.files;
-            zipPaths.current = response.zipPaths;
-        }
-        if (files?.length > 0) {
-            addLogLine(
-                ` desktop upload for type:${type} and fileCount: ${files?.length} requested`
-            );
-            setElectronFiles(files);
-            props.closeUploadTypeSelector();
-        }
-    };
+    // const handleDesktopUpload = async (type: PICKED_UPLOAD_TYPE) => {
+    //     let files: ElectronFile[];
+    //     pickedUploadType.current = type;
+    //     if (type === PICKED_UPLOAD_TYPE.FILES) {
+    //         files = await ImportService.showUploadFilesDialog();
+    //     } else if (type === PICKED_UPLOAD_TYPE.FOLDERS) {
+    //         files = await ImportService.showUploadDirsDialog();
+    //     } else {
+    //         const response = await ImportService.showUploadZipDialog();
+    //         files = response.files;
+    //         zipPaths.current = response.zipPaths;
+    //     }
+    //     if (files?.length > 0) {
+    //         addLogLine(
+    //             ` desktop upload for type:${type} and fileCount: ${files?.length} requested`
+    //         );
+    //         setElectronFiles(files);
+    //     }
+    // };
 
-    const handleWebUpload = async (type: PICKED_UPLOAD_TYPE) => {
-        pickedUploadType.current = type;
-        if (type === PICKED_UPLOAD_TYPE.FILES) {
-            props.showUploadFilesDialog();
-        } else if (type === PICKED_UPLOAD_TYPE.FOLDERS) {
-            props.showUploadDirsDialog();
-        } else {
-            appContext.setDialogMessage(getDownloadAppMessage());
-        }
-    };
+    // const handleWebUpload = async (type: PICKED_UPLOAD_TYPE) => {
+    //     pickedUploadType.current = type;
+    //     if (type === PICKED_UPLOAD_TYPE.FILES) {
+    //         props.showUploadFilesDialog();
+    //     } else if (type === PICKED_UPLOAD_TYPE.FOLDERS) {
+    //         props.showUploadDirsDialog();
+    //     } else {
+    //         appContext.setDialogMessage(getDownloadAppMessage());
+    //     }
+    // };
 
     const cancelUploads = () => {
         uploadManager.cancelRunningUpload();
     };
 
-    const handleUpload = (type) => () => {
-        if (isElectron() && importService.checkAllElectronAPIsExists()) {
-            handleDesktopUpload(type);
-        } else {
-            handleWebUpload(type);
-        }
-    };
-
-    const handleFileUpload = handleUpload(PICKED_UPLOAD_TYPE.FILES);
-    const handleFolderUpload = handleUpload(PICKED_UPLOAD_TYPE.FOLDERS);
-    const handleZipUpload = handleUpload(PICKED_UPLOAD_TYPE.ZIPS);
+    // const handleUpload = (type) => () => {
+    //     if (isElectron() && importService.checkAllElectronAPIsExists()) {
+    //         handleDesktopUpload(type);
+    //     } else {
+    //         handleWebUpload(type);
+    //     }
+    // };
 
     const handlePublicUpload = async (
         uploaderName: string,
@@ -745,14 +744,6 @@ export default function Uploader(props: Props) {
                 onClose={handleChoiceModalClose}
                 uploadToSingleCollection={handleUploadToSingleCollection}
                 uploadToMultipleCollection={handleUploadToMultipleCollections}
-            />
-            <UploadTypeSelector
-                show={props.uploadTypeSelectorView}
-                onClose={props.closeUploadTypeSelector}
-                uploadFiles={handleFileUpload}
-                uploadFolders={handleFolderUpload}
-                uploadGoogleTakeoutZips={handleZipUpload}
-                hideZipUploadOption={props.zipUploadDisabled}
             />
             <UploadProgress
                 open={uploadProgressView}
