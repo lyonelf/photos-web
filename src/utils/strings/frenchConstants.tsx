@@ -24,7 +24,7 @@ const englishConstants = {
             <div> for your memories</div>
         </>
     ),
-    HERO_SLIDE_1: 'End-to-end encrypted by default',
+    HERO_SLIDE_1: 'Crypté de bout en bout par défaut',
     HERO_SLIDE_2_TITLE: () => (
         <>
             <div>Safely stored </div>
