@@ -47,14 +47,14 @@ const englishConstants = {
     NAME: 'Nom',
     ENTER_NAME: 'Saisir un nom',
     PUBLIC_UPLOADER_NAME_MESSAGE:
-        'Add a name so that your friends know who to thank for these great photos!',
-    EMAIL: 'Email',
-    ENTER_EMAIL: 'Enter email address',
-    DATA_DISCLAIMER: "We'll never share your data with anyone else.",
-    SUBMIT: 'Submit',
-    EMAIL_ERROR: 'Enter a valid email',
-    REQUIRED: 'Required',
-    VERIFY_EMAIL: 'Verify email',
+        'Ajouter un nom afin que vos amis sachent qui remercier pour ces magnifiques photos!',
+    EMAIL: 'E-mail',
+    ENTER_EMAIL: 'Saisir l''adresse e-mail',
+    DATA_DISCLAIMER: "Nous ne partagerons jamais vos données avec qui que ce soit.",
+    SUBMIT: 'Soumettre',
+    EMAIL_ERROR: 'Saisir un e-mail valide',
+    REQUIRED: 'Nécessaire',
+    VERIFY_EMAIL: 'Vérifier l''e-mail',
     EMAIL_SENT: ({ email }) => (
         <span>
             Verification code sent to{' '}
@@ -66,166 +66,167 @@ const englishConstants = {
             </Typography>
         </span>
     ),
-    CHECK_INBOX: 'Please check your inbox (and spam) to complete verification',
-    ENTER_OTT: 'Verification code',
-    RESEND_MAIL: 'Resend code',
-    VERIFY: 'Verify',
-    UNKNOWN_ERROR: 'Something went wrong, please try again',
-    INVALID_CODE: 'Invalid verification code',
-    EXPIRED_CODE: 'Your verification code has expired',
-    SENDING: 'Sending...',
-    SENT: 'Sent!',
-    PASSWORD: 'Password',
-    LINK_PASSWORD: 'Enter password to unlock the album',
-    ENTER_PASSPHRASE: 'Enter your password',
-    RETURN_PASSPHRASE_HINT: 'Password',
-    SET_PASSPHRASE: 'Set password',
-    VERIFY_PASSPHRASE: 'Sign in',
-    INCORRECT_PASSPHRASE: 'Incorrect password',
+    CHECK_INBOX: 'Veuillez consulter votre boite de réception (et indésirables) pour poursuivre la vérification',
+    ENTER_OTT: 'Code de vérification',
+    RESEND_MAIL: 'envoyer le code',
+    VERIFY: 'Vérifier',
+    UNKNOWN_ERROR: 'Quelque chose s''est mal passé, veuillez recommencer',
+    INVALID_CODE: 'Code de vérification non valide',
+    EXPIRED_CODE: 'Votre code de vérification a expiré',
+    SENDING: 'Envoi...',
+    SENT: 'Envoyé!',
+    PASSWORD: 'Mot de passe',
+    LINK_PASSWORD: 'Saisir le mot de passe pour déverrouiller l''album',
+    ENTER_PASSPHRASE: 'Saisir votre mot de passe',
+    RETURN_PASSPHRASE_HINT: 'Mot de passe',
+    SET_PASSPHRASE: 'Définir le mot de passe',
+    VERIFY_PASSPHRASE: 'Connexion',
+    INCORRECT_PASSPHRASE: 'Mot de passe non valide',
     ENTER_ENC_PASSPHRASE:
-        'Please enter a password that we can use to encrypt your data',
+        'Veuillez saisir un mot de passe que nous pourrons utiliser pour crypter vos données',
     PASSPHRASE_DISCLAIMER: () => (
         <>
-            We don't store your password, so if you forget it,{' '}
-            <strong>we will not be able to help you </strong>
-            recover your data without a recovery key.
+            Nous ne stockons pas votre mot de passe, donc si vous le perdez,{' '}
+            <strong>nous ne pourrons pas vous aider</strong>
+            à récupérer vos données sans une clé de récupération.
         </>
     ),
-    KEY_GENERATION_IN_PROGRESS_MESSAGE: 'Generating encryption keys...',
-    PASSPHRASE_HINT: 'Password',
-    CONFIRM_PASSPHRASE: 'Confirm password',
-    PASSPHRASE_MATCH_ERROR: "Passwords don't match",
+    KEY_GENERATION_IN_PROGRESS_MESSAGE: 'Génération des clés de cryptage...',
+    PASSPHRASE_HINT: 'Mot de passe',
+    CONFIRM_PASSPHRASE: 'Confirmer le mot de passe',
+    PASSPHRASE_MATCH_ERROR: "Les mots de passe ne correspondent pas",
     CONSOLE_WARNING_STOP: 'STOP!',
     CONSOLE_WARNING_DESC:
-        "This is a browser feature intended for developers. Please don't copy-paste unverified code here.",
-    SELECT_COLLECTION: 'Select an album to upload to',
-    CREATE_COLLECTION: 'New album',
-    ENTER_ALBUM_NAME: 'Album name',
-    CLOSE_OPTION: 'Close (Esc)',
-    ENTER_FILE_NAME: 'File name',
-    CLOSE: 'Close',
-    NO: 'No',
-    NOTHING_HERE: 'Nothing to see here yet 👀',
-    UPLOAD: 'Upload',
-    ADD_MORE_PHOTOS: 'Add more photos',
-    ADD_PHOTOS: 'Add photos',
-    SELECT_PHOTOS: 'Select photos',
-    FILE_UPLOAD: 'File Upload',
+        "Ceci est une fonction de navigateur dédiée aux développeurs. Veuillez ne pas copier-coller un code non vérifié à cet endroit.",
+    SELECT_COLLECTION: 'Choisir un album à charge vers',
+    CREATE_COLLECTION: 'Nouvel album',
+    ENTER_ALBUM_NAME: 'Nom de l''album',
+    CLOSE_OPTION: 'Fermer (Échap)',
+    ENTER_FILE_NAME: 'Nom du fichier',
+    CLOSE: 'Fermer',
+    NO: 'Non',
+    NOTHING_HERE: 'Il n''y a encore rien à voir ici 👀',
+    UPLOAD: 'Charger',
+    ADD_MORE_PHOTOS: 'Ajouter plus de photos',
+    ADD_PHOTOS: 'Ajouter des photos',
+    SELECT_PHOTOS: 'Sélectionner des photos',
+    FILE_UPLOAD: 'Fichier chargé',
     UPLOAD_STAGE_MESSAGE: {
-        0: 'Preparing to upload',
-        1: 'Reading google metadata files',
+        0: 'Préparation du chargement',
+        1: 'Lire les fichiers métadonnées de Google',
         2: (fileCounter) =>
             `${fileCounter.finished} / ${fileCounter.total} files metadata extracted`,
         3: (fileCounter) =>
             `${fileCounter.finished} / ${fileCounter.total} files backed up`,
-        4: 'Cancelling remaining uploads',
-        5: 'Backup complete',
+        4: 'Annulation des chargements restants',
+        5: 'Sauvegarde terminée',
     },
-    UPLOADING_FILES: 'File upload',
-    FILE_NOT_UPLOADED_LIST: 'The following files were not uploaded',
-    SUBSCRIPTION_EXPIRED: 'Subscription expired',
+    UPLOADING_FILES: 'Chargement de fichiers',
+    FILE_NOT_UPLOADED_LIST: 'Les fichiers suivants n''ont pas été chargés',
+    SUBSCRIPTION_EXPIRED: 'Abonnement expiré',
     SUBSCRIPTION_EXPIRED_MESSAGE: (onClick) => (
         <>
-            Your subscription has expired, please{' '}
-            <LinkButton onClick={onClick}> renew </LinkButton>
+            Votre abonnement a expiré, veuillez{' '}
+            <LinkButton onClick={onClick}> le renouvelleer </LinkButton>
         </>
     ),
-    STORAGE_QUOTA_EXCEEDED: 'Storage limit exceeded',
-    INITIAL_LOAD_DELAY_WARNING: 'First load may take some time',
-    USER_DOES_NOT_EXIST: 'Sorry, could not find a user with that email',
-    UPLOAD_BUTTON_TEXT: 'Upload',
-    NO_ACCOUNT: "Don't have an account",
-    ACCOUNT_EXISTS: 'Already have an account',
-    ALBUM_NAME: 'Album name',
-    CREATE: 'Create',
-    DOWNLOAD: 'Download',
-    DOWNLOAD_OPTION: 'Download (D)',
-    DOWNLOAD_FAVORITES: 'Download favorites',
-    DOWNLOAD_UNCATEGORIZED: 'Download uncategorized',
-    COPY_OPTION: 'Copy as PNG (Ctrl/Cmd - C)',
-    TOGGLE_FULLSCREEN: 'Toggle fullscreen (F)',
+    STORAGE_QUOTA_EXCEEDED: 'Limite de stockage atteinte',
+    INITIAL_LOAD_DELAY_WARNING: 'La première consultation peut prendre du temps',
+    USER_DOES_NOT_EXIST: 'Désolé, impossible de trouver un utilisateur avec cet e-mail',
+    UPLOAD_BUTTON_TEXT: 'Charger',
+    NO_ACCOUNT: "Je n''ai pas de compte",
+    ACCOUNT_EXISTS: 'J''ai déjà un compte',
+    ALBUM_NAME: 'Nom de l''album',
+    CREATE: 'Créer',
+    DOWNLOAD: 'Télécharger',
+    DOWNLOAD_OPTION: 'Télécharger (D)',
+    DOWNLOAD_FAVORITES: 'Télécharger les favoris',
+    DOWNLOAD_UNCATEGORIZED: 'Télécharger les hors catégories',
+    COPY_OPTION: 'Copier en PNG (Ctrl/Cmd - C)',
+    TOGGLE_FULLSCREEN: 'Plein écran (F)',
     ZOOM_IN_OUT: 'Zoom in/out',
-    PREVIOUS: 'Previous (←)',
-    NEXT: 'Next (→)',
+    PREVIOUS: 'Précédent (←)',
+    NEXT: 'Suivant (→)',
     NO_INTERNET_CONNECTION:
-        'Please check your internet connection and try again',
+        'Veuillez vérifier votre connexion internet puis réessayer',
     TITLE: 'ente Photos',
     UPLOAD_FIRST_PHOTO_DESCRIPTION: () => (
         <>
-            Preserve your first memory with <strong> ente </strong>
+            Protégez votre premier souvenir avec<strong> ente </strong>
         </>
     ),
-    UPLOAD_FIRST_PHOTO: 'Preserve',
+    UPLOAD_FIRST_PHOTO: 'Protéger',
     UPLOAD_DROPZONE_MESSAGE: 'Drop to backup your files',
     WATCH_FOLDER_DROPZONE_MESSAGE: 'Drop to add watched folder',
-    TRASH_FILES_TITLE: 'Delete files?',
-    TRASH_FILE_TITLE: 'Delete file?',
-    DELETE_FILES_TITLE: 'Delete immediately?',
+    TRASH_FILES_TITLE: 'Supprimer les fichiers?',
+    TRASH_FILE_TITLE: 'Supprimer le fichier?',
+    DELETE_FILES_TITLE: 'Supprimer immédiatement?',
     DELETE_FILES_MESSAGE:
-        'Selected files will be permanently deleted from your ente account.',
-    DELETE_FILE: 'Delete files',
-    DELETE: 'Delete',
-    DELETE_OPTION: 'Delete (DEL)',
-    FAVORITE: 'Favorite',
-    FAVORITE_OPTION: 'Favorite (L)',
-    UNFAVORITE_OPTION: 'Unfavorite (L)',
-    UNFAVORITE: 'Unfavorite',
-    MULTI_FOLDER_UPLOAD: 'Multiple folders detected',
-    UPLOAD_STRATEGY_CHOICE: 'Would you like to upload them into',
-    UPLOAD_STRATEGY_SINGLE_COLLECTION: 'A single album',
-    OR: 'or',
-    UPLOAD_STRATEGY_COLLECTION_PER_FOLDER: 'Separate albums',
+        'Les fichiers sélectionnés seront définitivement supprimés de votre compte ente.',
+    DELETE_FILE: 'Supprimer les fichiers',
+    DELETE: 'Supprimer',
+    DELETE_OPTION: 'Supprimer (DEL)',
+    FAVORITE: 'Favori',
+    FAVORITE_OPTION: 'Favori (L)',
+    UNFAVORITE_OPTION: 'Non favori (L)',
+    UNFAVORITE: 'Non favori',
+    MULTI_FOLDER_UPLOAD: 'Plusieurs dossiers détectés',
+    UPLOAD_STRATEGY_CHOICE: 'Voulez-vous les charger dans',
+    UPLOAD_STRATEGY_SINGLE_COLLECTION: 'Un seul album',
+    OR: 'ou',
+    UPLOAD_STRATEGY_COLLECTION_PER_FOLDER: 'Albums séparés',
     SESSION_EXPIRED_MESSAGE:
-        'Your session has expired, please login again to continue',
-    SESSION_EXPIRED: 'Session expired',
-    SYNC_FAILED: 'Failed to sync with server, please refresh this page',
+        'Votre session a expiré, veuillez vous reconnecter pour poursuivre',
+    SESSION_EXPIRED: 'Session expiré',
+    SYNC_FAILED: 'Échec de synchronisation avec le serveur, veuillez rafraîchir la page',
     PASSWORD_GENERATION_FAILED:
-        "Your browser was unable to generate a strong key that meets ente's encryption standards, please try using the mobile app or another browser",
-    CHANGE_PASSWORD: 'Change password',
-    GO_BACK: 'Go back',
-    RECOVERY_KEY: 'Recovery key',
-    SAVE_LATER: 'Do this later',
-    SAVE: 'Save Key',
+        "Votre navigateur ne permet pas de générer une clé forte correspondant aux standards de cryptage de ente, veuillez réessayer en utilisant l'appli mobile ou un autre navigateur",
+    CHANGE_PASSWORD: 'Modifier le mot de passe',
+    GO_BACK: 'Retour',
+    RECOVERY_KEY: 'Clé de récupération',
+    SAVE_LATER: 'Plus tard',
+    SAVE: 'Sauvegarder la clé',
     RECOVERY_KEY_DESCRIPTION:
-        'If you forget your password, the only way you can recover your data is with this key.',
+        'Si vous oubliez votre mot de passe, la seule façon de récupérer vos données est grâce à cette clé.',
     RECOVER_KEY_GENERATION_FAILED:
-        'Recovery code could not be generated, please try again',
+        'Le code de récupération ne peut être généré, veuillez réessayer',
     KEY_NOT_STORED_DISCLAIMER:
-        "We don't store this key, so please save this in a safe place",
-    FORGOT_PASSWORD: 'Forgot password',
-    RECOVER_ACCOUNT: 'Recover account',
-    RECOVERY_KEY_HINT: 'Recovery key',
-    RECOVER: 'Recover',
-    NO_RECOVERY_KEY: 'No recovery key?',
-    INCORRECT_RECOVERY_KEY: 'Incorrect recovery key',
-    SORRY: 'Sorry',
+        "Nous ne stockons pas cette clé, veuillez donc la sauvegarder dans un endroit sûr",
+    FORGOT_PASSWORD: 'Mot de passe oublié',
+    RECOVER_ACCOUNT: 'Récupérer le compte',
+    RECOVERY_KEY_HINT: 'Clé de récupération',
+    RECOVER: 'Récupérer',
+    NO_RECOVERY_KEY: 'Pas de clé de récuparation?',
+    INCORRECT_RECOVERY_KEY: 'Clé de récupération non valide',
+    SORRY: 'Désolé',
     NO_RECOVERY_KEY_MESSAGE:
-        'Due to the nature of our end-to-end encryption protocol, your data cannot be decrypted without your password or recovery key',
+        'En raison de notre protocole de cryptage de bout en bout, vos données ne peuvent être décryptées sans votre mot de passe ou clé de récupération',
     NO_TWO_FACTOR_RECOVERY_KEY_MESSAGE: () => (
         <>
-            Please drop an email to{' '}
-            <a href="mailto:support@ente.io">support@ente.io</a> from your
-            registered email address
+            Veuillez envoyer un e-mail à{' '}
+            <a href="mailto:support@ente.io">support@ente.io</a> depuis votre
+            adresse enregistrée
         </>
     ),
-    CONTACT_SUPPORT: 'Contact support',
-    REQUEST_FEATURE: 'Request Feature',
+    CONTACT_SUPPORT: 'Contacter le support',
+    REQUEST_FEATURE: 'Soumettre une idée',
     SUPPORT: 'Support',
-    CONFIRM: 'Confirm',
-    SKIP_SUBSCRIPTION_PURCHASE: 'Continue with free plan',
-    CANCEL: 'Cancel',
-    LOGOUT: 'Logout',
-    DELETE_ACCOUNT: 'Delete account',
+    CONFIRM: 'Confirmer',
+    SKIP_SUBSCRIPTION_PURCHASE: 'Poursuivre avec l''option gratuite',
+    CANCEL: 'Annuler',
+    LOGOUT: 'Déconnexion',
+    DELETE_ACCOUNT: 'Supprimer le compte',
     DELETE_ACCOUNT_MESSAGE: () => (
         <>
             <p>
-                Please send an email to{' '}
+                Veuillez envoyer un e-mail à{' '}
                 <Link href="mailto:account-deletion@ente.io">
                     account-deletion@ente.io
                 </Link>{' '}
-                from your registered email address.{' '}
+                depuis votre
+            adresse enregistrée.{' '}
             </p>
-            <p>Your request will be processed within 72 hours.</p>
+            <p>Votre demande sera traitée dans les 72 heures.</p>
         </>
     ),
     LOGOUT_MESSAGE: 'Are you sure you want to logout?',
