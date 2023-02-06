@@ -10,7 +10,7 @@ import { formatNumberWithCommas } from '.';
  */
 
 const dateString = function (date) {
-    return new Date(date / 1000).toLocaleDateString('en-US', {
+    return new Date(date / 1000).toLocaleDateString('fr-FR', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
@@ -31,7 +31,7 @@ const englishConstants = {
             <div>at a fallout shelter</div>
         </>
     ),
-    HERO_SLIDE_2: 'Designed to outlive',
+    HERO_SLIDE_2: 'Conçu pour survivre',
     HERO_SLIDE_3_TITLE: () => (
         <>
             <div>Available</div>
@@ -40,12 +40,12 @@ const englishConstants = {
     ),
     HERO_SLIDE_3: 'Android, iOS, Web, Desktop',
     COMPANY_NAME: 'ente',
-    LOGIN: 'Login',
-    SIGN_UP: 'Signup',
-    NEW_USER: 'New to ente',
-    EXISTING_USER: 'Existing user',
-    NAME: 'Name',
-    ENTER_NAME: 'Enter name',
+    LOGIN: 'Connexion',
+    SIGN_UP: 'Inscription',
+    NEW_USER: 'Nouveau sur ente',
+    EXISTING_USER: 'Utilisateur existant',
+    NAME: 'Nom',
+    ENTER_NAME: 'Saisir un nom',
     PUBLIC_UPLOADER_NAME_MESSAGE:
         'Add a name so that your friends know who to thank for these great photos!',
     EMAIL: 'Email',
