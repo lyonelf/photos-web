@@ -38,7 +38,7 @@ const englishConstants = {
             <div> everywhere</div>
         </>
     ),
-    HERO_SLIDE_3: 'Android, iOS, Web, Desktop',
+    HERO_SLIDE_3: 'Android, iOS, Web, Ordinateur',
     COMPANY_NAME: 'ente',
     LOGIN: 'Connexion',
     SIGN_UP: 'Inscription',
@@ -229,16 +229,16 @@ const englishConstants = {
             <p>Votre demande sera traitée dans les 72 heures.</p>
         </>
     ),
-    LOGOUT_MESSAGE: 'Are you sure you want to logout?',
-    CHANGE: 'Change',
-    CHANGE_EMAIL: 'Change email',
+    LOGOUT_MESSAGE: 'Voulez-vous vraiment vous déconnecter?',
+    CHANGE: 'Modifier',
+    CHANGE_EMAIL: 'Modifier l''e-mail',
     OK: 'OK',
-    SUCCESS: 'Success',
-    ERROR: 'Error',
+    SUCCESS: 'Parfait',
+    ERROR: 'Erreur',
     MESSAGE: 'Message',
     INSTALL_MOBILE_APP: () => (
         <>
-            Install our{' '}
+            Installez notre application{' '}
             <a
                 href="https://play.google.com/store/apps/details?id=io.ente.photos"
                 target="_blank"
@@ -246,147 +246,145 @@ const englishConstants = {
                 rel="noreferrer">
                 Android
             </a>{' '}
-            or{' '}
+            ou{' '}
             <a
                 href="https://apps.apple.com/in/app/ente-photos/id1542026904"
                 style={{ color: '#51cd7c' }}
                 target="_blank"
                 rel="noreferrer">
-                iOS app{' '}
+                iOS {' '}
             </a>
-            to automatically backup all your photos
+            pour sauvegarder automatiquement toutes vos photos
         </>
     ),
     DOWNLOAD_APP_MESSAGE:
-        'Sorry, this operation is currently only supported on our desktop app',
-    DOWNLOAD_APP: 'Download desktop app',
-    EXPORT: 'Export Data',
+        'Désolé, cette opération est actuellement supportée uniquement sur notre appli pour ordinateur',
+    DOWNLOAD_APP: 'Télécharger l''appli pour ordinateur',
+    EXPORT: 'Exporter des données',
 
     // ========================
     // Subscription
     // ========================
-    SUBSCRIPTION: 'Subscription',
-    SUBSCRIBE: 'Subscribe',
-    SUBSCRIPTION_PLAN: 'Subscription plan',
-    USAGE_DETAILS: 'Usage',
-    MANAGE: 'Manage',
-    MANAGEMENT_PORTAL: 'Manage payment method',
-    MANAGE_FAMILY_PORTAL: 'Manage family',
-    LEAVE_FAMILY_PLAN: 'Leave family plan',
-    LEAVE: 'Leave',
-    LEAVE_FAMILY_CONFIRM: 'Are you sure that you want to leave family plan?',
-    CHOOSE_PLAN: 'Choose your plan',
-    MANAGE_PLAN: 'Manage your subscription',
-    ACTIVE: 'Active',
+    SUBSCRIPTION: 'Abonnement',
+    SUBSCRIBE: 'S''abonner',
+    SUBSCRIPTION_PLAN: 'Plan d''abonnement',
+    USAGE_DETAILS: 'Utilisation',
+    MANAGE: 'Gérer',
+    MANAGEMENT_PORTAL: 'Gérer le mode de paiement',
+    MANAGE_FAMILY_PORTAL: 'Gérer la famille',
+    LEAVE_FAMILY_PLAN: 'Quitter le plan famille',
+    LEAVE: 'Quitter',
+    LEAVE_FAMILY_CONFIRM: 'Êtes-vous certains de vouloir quitter le plan famille?',
+    CHOOSE_PLAN: 'Choisir votre plan',
+    MANAGE_PLAN: 'Gérer votre abonnement',
+    ACTIVE: 'Actif',
 
-    OFFLINE_MSG: 'You are offline, cached memories are being shown',
+    OFFLINE_MSG: 'Vous êtes hors-ligne, les mémoires cache sont affichées',
 
     FREE_SUBSCRIPTION_INFO: (expiryTime) => (
         <>
-            You are on the <strong>free</strong> plan that expires on{' '}
+            Vous êtes sur le plan <strong>gratuit</strong> qui expire le{' '}
             {dateString(expiryTime)}
         </>
     ),
 
-    FAMILY_SUBSCRIPTION_INFO: 'You are on a family plan managed by',
+    FAMILY_SUBSCRIPTION_INFO: 'Vous êtes sur le plan famille géré par',
 
     RENEWAL_ACTIVE_SUBSCRIPTION_STATUS: (expiryTime) => (
-        <>Renews on {dateString(expiryTime)}</>
+        <>Renouveller le {dateString(expiryTime)}</>
     ),
     RENEWAL_CANCELLED_SUBSCRIPTION_STATUS: (expiryTime) => (
-        <>Ends on {dateString(expiryTime)}</>
+        <>Pris fin le {dateString(expiryTime)}</>
     ),
 
     RENEWAL_CANCELLED_SUBSCRIPTION_INFO: (expiryTime) => (
-        <>Your subscription will be cancelled on {dateString(expiryTime)}</>
+        <>Votre abonnement sera annulé le {dateString(expiryTime)}</>
     ),
 
     STORAGE_QUOTA_EXCEEDED_SUBSCRIPTION_INFO: (onClick) => (
         <>
-            You have exceeded your storage quota,, please{' '}
-            <LinkButton onClick={onClick}> upgrade </LinkButton>
+            Vous avez dépassé votre quota de stockage,, veuillez{' '}
+            <LinkButton onClick={onClick}>mettre à  niveau</LinkButton>
         </>
     ),
     SUBSCRIPTION_PURCHASE_SUCCESS: (expiryTime) => (
         <>
-            <p>We've received your payment</p>
+            <p>Nous avons reçu votre paiement</p>
             <p>
-                Your subscription is valid till{' '}
+                Votre abonnement est valide jusqu''au{' '}
                 <strong>{dateString(expiryTime)}</strong>
             </p>
         </>
     ),
     SUBSCRIPTION_PURCHASE_CANCELLED:
-        'Your purchase was canceled, please try again if you want to subscribe',
+        'Votre achat est annulé, veuillez réessayer si vous souhaitez vous abonner',
     SUBSCRIPTION_VERIFICATION_FAILED:
-        'We were not able to verify your purchase, verification can take few hours',
+        'Nous ne sommes pas encore en mesure de vérifier votre achat, cela peut prendre quelques heures',
     SUBSCRIPTION_PURCHASE_FAILED:
-        'Subscription purchase failed , please try again',
+        'Échec lors de l''achat de l''abonnement, veuillez réessayer',
     SUBSCRIPTION_UPDATE_FAILED:
-        'Subscription updated failed , please try again',
+        'Échec lors de la mise à niveau de l''abonnement, veuillez réessayer',
     UPDATE_PAYMENT_METHOD_MESSAGE:
-        'We are sorry, payment failed when we tried to charge your card, please update your payment method and try again',
+        'Désolé, échec de paiement lors de la saisie de votre carte, veuillez mettr eà jour votre moyen de paiement et réessayer',
     STRIPE_AUTHENTICATION_FAILED:
-        'We are unable to authenticate your payment method. please choose a different payment method and try again',
-    UPDATE_PAYMENT_METHOD: 'Update payment method',
-    MONTHLY: 'Monthly',
-    YEARLY: 'Yearly',
-    UPDATE_SUBSCRIPTION_MESSAGE: 'Are you sure you want to change your plan?',
-    UPDATE_SUBSCRIPTION: 'Change plan',
+        'Nous n''avons pas pu authentifier votre moyen de paiement. Veuillez choisir un moyen différent et réessayer',
+    UPDATE_PAYMENT_METHOD: 'Mise à jour du moyen de paiement',
+    MONTHLY: 'Mensuel',
+    YEARLY: 'Annuel',
+    UPDATE_SUBSCRIPTION_MESSAGE: 'Êtes-vous certains de vouloir changer de plan?',
+    UPDATE_SUBSCRIPTION: 'Changer de plan',
 
-    CANCEL_SUBSCRIPTION: 'Cancel subscription',
+    CANCEL_SUBSCRIPTION: 'Annuler l''abonnement',
     CANCEL_SUBSCRIPTION_MESSAGE: () => (
         <>
             <p>
-                All of your data will be deleted from our servers at the end of
-                this billing period.
+                Toutes vos données seront supprimées de nos serveurs à la fin de cette période d'abonnement.
             </p>
-            <p>Are you sure that you want to cancel your subscription?</p>
+            <p>Voulez-vous vraiment annuler votre abonnement?</p>
         </>
     ),
-    SUBSCRIPTION_CANCEL_FAILED: 'Failed to cancel subscription',
-    SUBSCRIPTION_CANCEL_SUCCESS: 'Subscription canceled successfully',
+    SUBSCRIPTION_CANCEL_FAILED: 'Échec lors de l''annulation de l''abonnement',
+    SUBSCRIPTION_CANCEL_SUCCESS: 'Votre abonnement a bien été annulé',
 
-    REACTIVATE_SUBSCRIPTION: 'Reactivate subscription',
+    REACTIVATE_SUBSCRIPTION: 'Réactiver l''abonnement',
     REACTIVATE_SUBSCRIPTION_MESSAGE: (expiryTime) =>
-        `Once reactivated, you will be billed on ${dateString(expiryTime)}`,
-    SUBSCRIPTION_ACTIVATE_SUCCESS: 'Subscription activated successfully ',
-    SUBSCRIPTION_ACTIVATE_FAILED: 'Failed to reactivate subscription renewals',
+        `Une fois réactivée, vous serrez facturé de ${dateString(expiryTime)}`,
+    SUBSCRIPTION_ACTIVATE_SUCCESS: 'Votre abonnement est bien activé',
+    SUBSCRIPTION_ACTIVATE_FAILED: 'Échec lors de la réactivation de l''abonnement',
 
-    SUBSCRIPTION_PURCHASE_SUCCESS_TITLE: 'Thank you',
-    CANCEL_SUBSCRIPTION_ON_MOBILE: 'Cancel mobile subscription',
+    SUBSCRIPTION_PURCHASE_SUCCESS_TITLE: 'Merci',
+    CANCEL_SUBSCRIPTION_ON_MOBILE: 'Annuler l''abonnement mobile',
     CANCEL_SUBSCRIPTION_ON_MOBILE_MESSAGE:
-        'Please cancel your subscription from the mobile app to activate a subscription here',
+        'Veuillez annuler votre abonnement depuis l''appli mobile pour activer un abonnement ici',
     MAIL_TO_MANAGE_SUBSCRIPTION: (
         <>
-            Please contact us at{' '}
-            <Link href={`mailto:support@ente.io`}>support@ente.io</Link> to
-            manage your subscription
+            Veuillez nous contacter à{' '}
+            <Link href={`mailto:support@ente.io`}>support@ente.io</Link> pour
+            gérer votre abonnement
         </>
     ),
-    RENAME: 'Rename',
-    RENAME_FILE: 'Rename file',
-    RENAME_COLLECTION: 'Rename album',
-    DELETE_COLLECTION_TITLE: 'Delete album?',
-    DELETE_COLLECTION: 'Delete album',
-    DELETE_COLLECTION_FAILED: 'Album deletion failed, please try again',
+    RENAME: 'Renommer',
+    RENAME_FILE: 'Renommer le fichier',
+    RENAME_COLLECTION: 'Renommer l''album',
+    DELETE_COLLECTION_TITLE: 'Supprimer l''album?',
+    DELETE_COLLECTION: 'Supprimer l''album',
+    DELETE_COLLECTION_FAILED: 'L''album n''a pas pu être supprimé, veuillez réessayer',
     DELETE_COLLECTION_MESSAGE: () => (
         <p>
-            Also delete the photos (and videos) present in this album from
-            <span style={{ color: '#fff' }}> all </span> other albums they are
-            part of?
+            Supprimer aussi les photos (et vidéos) présentes dans cet album depuis
+            <span style={{ color: '#fff' }}> tous </span> les autres albums dont ils font partie?
         </p>
     ),
-    DELETE_PHOTOS: 'Delete photos',
-    KEEP_PHOTOS: 'Keep photos',
-    SHARE: 'Share',
-    SHARE_COLLECTION: 'Share album',
-    SHARE_WITH_PEOPLE: 'Share with your loved ones',
-    SHAREES: 'Shared with',
-    PUBLIC_URL: 'Public link',
-    SHARE_WITH_SELF: 'Oops, you cannot share with yourself',
+    DELETE_PHOTOS: 'Supprimer des photos',
+    KEEP_PHOTOS: 'Conserver des photos',
+    SHARE: 'Partager',
+    SHARE_COLLECTION: 'Partager l''album',
+    SHARE_WITH_PEOPLE: 'Partager avec vos proches',
+    SHAREES: 'Partager avec',
+    PUBLIC_URL: 'Lien public',
+    SHARE_WITH_SELF: 'Oups, vous ne pouvez pas partager avec  vous même',
     ALREADY_SHARED: (email) =>
-        `Oops, you're already sharing this with ${email}`,
+        `Oups, vous partager déjà cela avec ${email}`,
     SHARING_BAD_REQUEST_ERROR: 'Sharing album not allowed',
     SHARING_DISABLED_FOR_FREE_ACCOUNTS: 'Sharing is disabled for free accounts',
     DOWNLOAD_COLLECTION: 'Download album',
