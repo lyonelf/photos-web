@@ -385,20 +385,20 @@ const englishConstants = {
     SHARE_WITH_SELF: 'Oups, vous ne pouvez pas partager avec  vous même',
     ALREADY_SHARED: (email) =>
         `Oups, vous partager déjà cela avec ${email}`,
-    SHARING_BAD_REQUEST_ERROR: 'Sharing album not allowed',
-    SHARING_DISABLED_FOR_FREE_ACCOUNTS: 'Sharing is disabled for free accounts',
-    DOWNLOAD_COLLECTION: 'Download album',
+    SHARING_BAD_REQUEST_ERROR: 'Partage d''album non autorisé',
+    SHARING_DISABLED_FOR_FREE_ACCOUNTS: 'Le partage est désactivé pour les comptes gratuits',
+    DOWNLOAD_COLLECTION: 'Télécharger l''album',
     DOWNLOAD_COLLECTION_MESSAGE: () => (
         <>
-            <p>Are you sure you want to download the complete album?</p>
-            <p>All files will be queued for download sequentially</p>
+            <p>Êtes-vous certains de vouloir télécharger l''album complet?</p>
+            <p>Tous les fichiers seront mis en file d''attente pour un téléchargement fractionné</p>
         </>
     ),
-    DOWNLOAD_COLLECTION_FAILED: 'Album downloading failed, please try again',
-    CREATE_ALBUM_FAILED: 'Failed to create album , please try again',
+    DOWNLOAD_COLLECTION_FAILED: 'Échec de téléchargement de l''album, veuillez réessayer',
+    CREATE_ALBUM_FAILED: 'Échec de création de l''album , veuillez réessayer',
 
-    SEARCH_RESULTS: 'Search results',
-    SEARCH_HINT: () => <span>Search for albums, dates ...</span>,
+    SEARCH_RESULTS: 'Résultats de la recherche',
+    SEARCH_HINT: () => <span>Recherche d''albums, dates ...</span>,
     SEARCH_TYPE: (type: SuggestionType) => {
         switch (type) {
             case SuggestionType.COLLECTION:
@@ -435,158 +435,158 @@ const englishConstants = {
     ),
     CONFIRM_PASSWORD_NOT_SAVED: () => (
         <p>
-            I understand that if I lose my password , I may lose my data since
-            my data is{' '}
+            Je comprend que si je perd le mot de passe,je peux perdre mes données puisque mes données sont
+            {' '}
             <a
                 href="https://ente.io/architecture"
                 target="_blank"
                 rel="noreferrer">
-                end-to-end encrypted
+                cryptées de bout en bout
             </a>{' '}
-            with ente
+            avec ente
         </p>
     ),
-    NOT_FILE_OWNER: 'You cannot delete files in a shared album',
-    ADD_TO_COLLECTION: 'Add to album',
-    SELECTED: 'selected',
-    VIDEO_PLAYBACK_FAILED: 'Video format not supported',
+    NOT_FILE_OWNER: 'Vous ne pouvez pas supprimer les fichiers d''un album partagé',
+    ADD_TO_COLLECTION: 'Ajouter à l''album',
+    SELECTED: 'sélectionné',
+    VIDEO_PLAYBACK_FAILED: 'Le format vidéo n''est pas supporté',
     VIDEO_PLAYBACK_FAILED_DOWNLOAD_INSTEAD:
-        'This video cannot be played on your browser',
-    METADATA: 'Metadata',
+        'Cette vidéo ne peut pas être lue sur votre navigateur',
+    METADATA: 'Metadonnées',
     INFO: 'Info ',
     INFO_OPTION: 'Info (I)',
-    FILE_ID: 'File ID',
-    FILE_NAME: 'File name',
+    FILE_ID: 'ID fichier',
+    FILE_NAME: 'Nom de fichier',
     CAPTION: 'Description',
-    CAPTION_PLACEHOLDER: 'Add a description',
-    CREATION_TIME: 'Creation time',
-    UPDATED_ON: 'Updated on',
-    LOCATION: 'Location',
-    SHOW_ON_MAP: 'View on OpenStreetMap',
-    DETAILS: 'Details',
-    VIEW_EXIF: 'View all EXIF data',
-    NO_EXIF: 'No EXIF data',
+    CAPTION_PLACEHOLDER: 'Ajouter une description',
+    CREATION_TIME: 'Heure de création',
+    UPDATED_ON: 'Mis à jour le',
+    LOCATION: 'Emplacement',
+    SHOW_ON_MAP: 'Visualiser sur OpenStreetMap',
+    DETAILS: 'Détails',
+    VIEW_EXIF: 'Visualiser toutes les données EXIF',
+    NO_EXIF: 'Aucune donnée EXIF',
     EXIF: 'EXIF',
-    DEVICE: 'Device',
-    IMAGE_SIZE: 'Image size',
+    DEVICE: 'Appareil',
+    IMAGE_SIZE: 'Taille de l''image',
     FLASH: 'Flash',
-    FOCAL_LENGTH: 'Focal length',
-    APERTURE: 'Aperture',
+    FOCAL_LENGTH: 'Distance focale',
+    APERTURE: 'Ouverture',
     ISO: 'ISO',
-    SHOW_ALL: 'show all',
+    SHOW_ALL: 'Afficher tout',
     LOGIN_TO_UPLOAD_FILES: (count: number) =>
         count === 1
-            ? `1 file received. login to upload`
-            : `${count} files received. login to upload`,
+            ? `1 fichier reçu. Connectez-vous pour le charger`
+            : `${count} fichiers reçus. Connectez-vous pour les charger`,
     FILES_TO_BE_UPLOADED: (count: number) =>
         count === 1
-            ? `1 file received. uploading in a jiffy`
-            : `${count} files received. uploading in a jiffy`,
-    TWO_FACTOR: 'Two-factor',
-    TWO_FACTOR_AUTHENTICATION: 'Two-factor authentication',
+            ? `1 fichier reçu. Chargement en tant que jiffy`
+            : `${count} fichiers reçus. Chargement en tant que jiffy`,
+    TWO_FACTOR: 'Double authentification',
+    TWO_FACTOR_AUTHENTICATION: 'Authentification double-facteur',
     TWO_FACTOR_QR_INSTRUCTION:
-        'Scan the QR code below with your favorite authenticator app',
-    ENTER_CODE_MANUALLY: 'Enter the code manually',
+        'Scannez le QRCode ci-dessous avec une appli d''authentification (ex: FreeOTP) ',
+    ENTER_CODE_MANUALLY: 'Saisir le code manuellement',
     TWO_FACTOR_MANUAL_CODE_INSTRUCTION:
-        'Please enter this code in your favorite authenticator app',
-    SCAN_QR_CODE: 'Scan QR code instead',
-    CONTINUE: 'Continue',
-    BACK: 'Back',
-    ENABLE_TWO_FACTOR: 'Enable two-factor',
-    ENABLE: 'Enable',
-    LOST_DEVICE: 'Lost two-factor device',
-    INCORRECT_CODE: 'Incorrect code',
-    RECOVER_TWO_FACTOR: 'Recover two-factor',
+        'Veuillez saisir ce code dans votre appli d''authentification',
+    SCAN_QR_CODE: 'Scannez le QRCode de préférence',
+    CONTINUE: 'Continuer',
+    BACK: 'Retour',
+    ENABLE_TWO_FACTOR: 'Activer la double-authentification',
+    ENABLE: 'Activer',
+    LOST_DEVICE: 'Perte de l''appareil identificateur',
+    INCORRECT_CODE: 'Code non valide',
+    RECOVER_TWO_FACTOR: 'Récupérer la double-authentification',
     TWO_FACTOR_INFO:
-        'Add an additional layer of security by requiring more than your email and password to log in to your account',
-    DISABLE_TWO_FACTOR_LABEL: 'Disable two-factor authentication',
-    UPDATE_TWO_FACTOR_LABEL: 'Update your authenticator device',
-    DISABLE: 'Disable',
-    RECONFIGURE: 'Reconfigure',
-    UPDATE_TWO_FACTOR: 'Update two-factor',
+        'Ajouter une couche de sécurité supplémentaire afin de nécessiter plus que simplement votre e-mail et mot de passe pour vous connecter à votre compte',
+    DISABLE_TWO_FACTOR_LABEL: 'Désactiver la double-authentification',
+    UPDATE_TWO_FACTOR_LABEL: 'Mise à jour de votre appareil identificateur',
+    DISABLE: 'Désactiver',
+    RECONFIGURE: 'Reconfigurer',
+    UPDATE_TWO_FACTOR: 'Mise à jour de la double-authentification',
     UPDATE_TWO_FACTOR_MESSAGE:
-        'Continuing forward will void any previously configured authenticators',
-    UPDATE: 'Update',
-    DISABLE_TWO_FACTOR: 'Disable two-factor',
+        'Continuer annulera tous les identificateurs précédemment configurés',
+    UPDATE: 'Mise à jour',
+    DISABLE_TWO_FACTOR: 'Désactiver la double-authentification',
     DISABLE_TWO_FACTOR_MESSAGE:
-        'Are you sure you want to disable your two-factor authentication',
-    TWO_FACTOR_SETUP_FAILED: 'Failed to setup two factor, please try again',
+        'Êtes-vous certains de vouloir désactiver la double-authentification',
+    TWO_FACTOR_SETUP_FAILED: 'Échec de configuration de la double-authentification, veuillez réessayer',
     TWO_FACTOR_SETUP_SUCCESS:
-        'Two factor authentication successfully configured',
-    TWO_FACTOR_DISABLE_SUCCESS: 'Two factor authentication disabled',
-    TWO_FACTOR_DISABLE_FAILED: 'Failed to disable two factor, please try again',
-    EXPORT_DATA: 'Export data',
-    SELECT_FOLDER: 'Select folder',
+        'La double-authentification est configurée',
+    TWO_FACTOR_DISABLE_SUCCESS: 'La double-authentification est désactivée',
+    TWO_FACTOR_DISABLE_FAILED: 'Échec de désactivation de la double-authentification, veuillez réessayer',
+    EXPORT_DATA: 'Exporter les données',
+    SELECT_FOLDER: 'Sélectionner un dossier',
     DESTINATION: 'Destination',
-    EXPORT_SIZE: 'Export size',
-    START: 'Start',
-    EXPORT_IN_PROGRESS: 'Export in progress...',
+    EXPORT_SIZE: 'Taille d''export',
+    START: 'Démarrer',
+    EXPORT_IN_PROGRESS: 'Export en cours...',
     PAUSE: 'Pause',
-    RESUME: 'Resume',
-    MINIMIZE: 'Minimize',
-    LAST_EXPORT_TIME: 'Last export time',
-    SUCCESSFULLY_EXPORTED_FILES: 'Successful exports',
-    FAILED_EXPORTED_FILES: 'Failed exports',
-    EXPORT_AGAIN: 'Resync',
-    RETRY_EXPORT_: 'Retry failed exports',
-    LOCAL_STORAGE_NOT_ACCESSIBLE: 'Local storage not accessible',
+    RESUME: 'Reprendre',
+    MINIMIZE: 'Réduire',
+    LAST_EXPORT_TIME: 'Horaire du dernier export',
+    SUCCESSFULLY_EXPORTED_FILES: 'Exports effectués',
+    FAILED_EXPORTED_FILES: 'Échec des exports',
+    EXPORT_AGAIN: 'Resynchro',
+    RETRY_EXPORT_: 'Réessayer les exports ayant échoués',
+    LOCAL_STORAGE_NOT_ACCESSIBLE: 'Stockage local non accessible',
     LOCAL_STORAGE_NOT_ACCESSIBLE_MESSAGE:
-        'Your browser or an addon is blocking ente from saving data into local storage. please try loading this page after switching your browsing mode.',
-    RETRY: 'Retry',
-    SEND_OTT: 'Send OTP',
-    EMAIl_ALREADY_OWNED: 'Email already taken',
-    EMAIL_UDPATE_SUCCESSFUL: 'Your email has been updated successfully',
-    UPLOAD_FAILED: 'Upload failed',
+        'Votre navigateur ou un complément bloque ente qui ne peut sauvegarder les données sur votre stockage local. Veuillez relancer cette page après avoir changé de mode de navigation.',
+    RETRY: 'Réessayer',
+    SEND_OTT: 'Envoyer OTP',
+    EMAIl_ALREADY_OWNED: 'Cet e-mail est déjà pris',
+    EMAIL_UDPATE_SUCCESSFUL: 'Votre e-mail a été mis à jour',
+    UPLOAD_FAILED: 'Échec du chargement',
     ETAGS_BLOCKED: (link: string) => (
         <>
             <Box mb={1}>
-                We were unable to upload the following files because of your
-                browser configuration.
+                Nosu n''avons pas pu charger les fichiers suivants à cause de la configuration de votre navigateur
+               .
             </Box>
             <Box>
-                Please disable any addons that might be preventing ente from
-                using <code>eTags</code> to upload large files, or use our{' '}
+                Veuillez désactiver tous les compléments qui pourraient empêcher ente d''utiliser
+                 les<code>eTags</code> pour charger de larges fichiers, ou bien utilisez notre{' '}
                 <Link href={link} target="_blank">
-                    desktop app
+                    appli pour ordinateur
                 </Link>{' '}
-                for a more reliable import experience.
+                pour une meilleure expérience lors des chargements.
             </Box>
         </>
     ),
     SKIPPED_VIDEOS_INFO: (link: string) => (
         <>
             <Box mb={1}>
-                Presently we do not support adding videos via public links.{' '}
+                Actuellement, nous ne supportons pas l''ajout de videos via des liens publics.{' '}
             </Box>
             <Box>
-                To share videos, please{' '}
+                Pour partager des vidéos, veuillez{' '}
                 <Link href={link} target="_blank">
-                    signup
+                    vous connecter à
                 </Link>{' '}
-                for ente and share with the intended recipients using their
-                email.
+                 ente et partager en utilisant l''e-mail concerné
+                .
             </Box>
         </>
     ),
 
     LIVE_PHOTOS_DETECTED:
-        'The photo and video files from your Live Photos have been merged into a single file',
+        'Les fichiers photos et vidéos depuis votre espace Live Photos ont été fusionnés en un seul fichier',
 
-    RETRY_FAILED: 'Retry failed uploads',
-    FAILED_UPLOADS: 'Failed uploads ',
-    SKIPPED_FILES: 'Ignored uploads',
-    THUMBNAIL_GENERATION_FAILED_UPLOADS: 'Thumbnail generation failed',
-    UNSUPPORTED_FILES: 'Unsupported files',
-    SUCCESSFUL_UPLOADS: 'Successful uploads',
+    RETRY_FAILED: 'Réessayer les chargements ayant échoués',
+    FAILED_UPLOADS: 'Chargements échoués ',
+    SKIPPED_FILES: 'Chargements ignorés',
+    THUMBNAIL_GENERATION_FAILED_UPLOADS: 'Échec de création d''une miniature',
+    UNSUPPORTED_FILES: 'Fichiers non supportés',
+    SUCCESSFUL_UPLOADS: 'Chargements réussis',
     SKIPPED_INFO:
-        'Skipped these as there are files with matching names in the same album',
-    UNSUPPORTED_INFO: 'ente does not support these file formats yet',
-    BLOCKED_UPLOADS: 'Blocked uploads',
-    SKIPPED_VIDEOS: 'Skipped videos',
-    INPROGRESS_METADATA_EXTRACTION: 'In progress',
-    INPROGRESS_UPLOADS: 'Uploads in progress',
-    TOO_LARGE_UPLOADS: 'Large files',
-    LARGER_THAN_AVAILABLE_STORAGE_UPLOADS: 'Insufficient storage',
+        'Ignorer ceux-ci car il y a des fichiers avec des noms identiques dans le même album',
+    UNSUPPORTED_INFO: 'ente ne supporte pas encore ces formats de fichiers',
+    BLOCKED_UPLOADS: 'Chargements bloqués',
+    SKIPPED_VIDEOS: 'Vidéos ignorées',
+    INPROGRESS_METADATA_EXTRACTION: 'En cours',
+    INPROGRESS_UPLOADS: 'Chargements en cours',
+    TOO_LARGE_UPLOADS: 'Gros fichiers',
+    LARGER_THAN_AVAILABLE_STORAGE_UPLOADS: 'Stockage insuffisant',
     LARGER_THAN_AVAILABLE_STORAGE_INFO:
         'These files were not uploaded as they exceed the maximum size limit for your storage plan',
     TOO_LARGE_INFO:
