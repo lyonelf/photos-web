@@ -24,7 +24,7 @@ const frenchConstants = {
             <div> for your memories</div>
         </>
     ),
-    HERO_SLIDE_1: 'Crypté de bout en bout par défaut',
+    HERO_SLIDE_1: 'Chiffrement de bout en bout par défaut',
     HERO_SLIDE_2_TITLE: () => (
         <>
             <div>Safely stored </div>
@@ -83,7 +83,7 @@ const frenchConstants = {
     VERIFY_PASSPHRASE: 'Connexion',
     INCORRECT_PASSPHRASE: 'Mot de passe non valide',
     ENTER_ENC_PASSPHRASE:
-        'Veuillez saisir un mot de passe que nous pourrons utiliser pour crypter vos données',
+        'Veuillez saisir un mot de passe que nous pourrons utiliser pour chiffrer vos données',
     PASSPHRASE_DISCLAIMER: () => (
         <>
             Nous ne stockons pas votre mot de passe, donc si vous le perdez,{' '}
@@ -91,7 +91,7 @@ const frenchConstants = {
             à récupérer vos données sans une clé de récupération.
         </>
     ),
-    KEY_GENERATION_IN_PROGRESS_MESSAGE: 'Génération des clés de cryptage...',
+    KEY_GENERATION_IN_PROGRESS_MESSAGE: 'Génération des clés de chiffrage...',
     PASSPHRASE_HINT: 'Mot de passe',
     CONFIRM_PASSPHRASE: 'Confirmer le mot de passe',
     PASSPHRASE_MATCH_ERROR: "Les mots de passe ne correspondent pas",
@@ -180,7 +180,7 @@ const frenchConstants = {
     SESSION_EXPIRED: 'Session expiré',
     SYNC_FAILED: 'Échec de synchronisation avec le serveur, veuillez rafraîchir la page',
     PASSWORD_GENERATION_FAILED:
-        "Votre navigateur ne permet pas de générer une clé forte correspondant aux standards de cryptage de ente, veuillez réessayer en utilisant l'appli mobile ou un autre navigateur",
+        "Votre navigateur ne permet pas de générer une clé forte correspondant aux standards de chiffrement de ente, veuillez réessayer en utilisant l'appli mobile ou un autre navigateur",
     CHANGE_PASSWORD: 'Modifier le mot de passe',
     GO_BACK: 'Retour',
     RECOVERY_KEY: 'Clé de récupération',
@@ -200,7 +200,7 @@ const frenchConstants = {
     INCORRECT_RECOVERY_KEY: 'Clé de récupération non valide',
     SORRY: 'Désolé',
     NO_RECOVERY_KEY_MESSAGE:
-        'En raison de notre protocole de cryptage de bout en bout, vos données ne peuvent être décryptées sans votre mot de passe ou clé de récupération',
+        'En raison de notre protocole de chiffrement de bout en bout, vos données ne peuvent être décryptées sans votre mot de passe ou clé de récupération',
     NO_TWO_FACTOR_RECOVERY_KEY_MESSAGE: () => (
         <>
             Veuillez envoyer un e-mail à{' '}
@@ -441,7 +441,7 @@ const frenchConstants = {
                 href="https://ente.io/architecture"
                 target="_blank"
                 rel="noreferrer">
-                cryptées de bout en bout
+                chiffrées de bout en bout
             </a>{' '}
             avec ente
         </p>
@@ -858,7 +858,7 @@ const frenchConstants = {
         </>
     ),
     WEAK_DEVICE:
-        "Le navigateur que vous utilisez n''est pas assez puissant pour crypter vos photos. Veuillez essayer de vous connecter à ente sur votre ordinateur, ou télécharger l'appli ente mobile/ordinateur.",
+        "Le navigateur que vous utilisez n''est pas assez puissant pour chiffrer vos photos. Veuillez essayer de vous connecter à ente sur votre ordinateur, ou télécharger l'appli ente mobile/ordinateur.",
     DRAG_AND_DROP_HINT: 'Sinon glissez déposez dans la fenêtre ente',
     ASK_FOR_FEEDBACK: (
         <>
