@@ -6,7 +6,7 @@ import { SuggestionType } from 'types/search';
 import { formatNumberWithCommas } from '.';
 
 /**
- * Global English constants.
+ * Global French constants.
  */
 
 const dateString = function (date) {
@@ -17,7 +17,7 @@ const dateString = function (date) {
     });
 };
 
-const englishConstants = {
+const frenchConstants = {
     HERO_SLIDE_1_TITLE: () => (
         <>
             <div>Private backups</div>
@@ -588,332 +588,331 @@ const englishConstants = {
     TOO_LARGE_UPLOADS: 'Gros fichiers',
     LARGER_THAN_AVAILABLE_STORAGE_UPLOADS: 'Stockage insuffisant',
     LARGER_THAN_AVAILABLE_STORAGE_INFO:
-        'These files were not uploaded as they exceed the maximum size limit for your storage plan',
+        'Ces fichiers n''ont pas été chargés car ils dépassent la taille maximale pour votre plan de stockage',
     TOO_LARGE_INFO:
-        'These files were not uploaded as they exceed our maximum file size limit',
+        'Ces fichiers n''ont pas été chargés car ils dépassent notre taille limite par fichier',
     THUMBNAIL_GENERATION_FAILED_INFO:
-        'These files were uploaded, but unfortunately we could not generate the thumbnails for them.',
-    UPLOAD_TO_COLLECTION: 'Upload to album',
-    UNCATEGORIZED: 'Uncategorized',
-    MOVE_TO_UNCATEGORIZED: 'Move to uncategorized',
-    ARCHIVE: 'Archive',
-    ARCHIVE_COLLECTION: 'Archive album',
-    ARCHIVE_SECTION_NAME: 'Archive',
-    ALL_SECTION_NAME: 'All',
-    MOVE_TO_COLLECTION: 'Move to album',
-    UNARCHIVE: 'Unarchive',
-    UNARCHIVE_COLLECTION: 'Unarchive album',
-    MOVE: 'Move',
-    ADD: 'Add',
-    SORT: 'Sort',
-    REMOVE: 'Remove',
-    YES_REMOVE: 'Yes, remove',
-    CONFIRM_REMOVE: 'Confirm removal',
-    REMOVE_FROM_COLLECTION: 'Remove from album',
-    TRASH: 'Trash',
-    MOVE_TO_TRASH: 'Move to trash',
+        'Ces fichiers sont bien chargés, mais nous ne pouvons pas créer de miniatures pour eux.',
+    UPLOAD_TO_COLLECTION: 'Charger dans l''album',
+    UNCATEGORIZED: 'Aucune catégorie',
+    MOVE_TO_UNCATEGORIZED: 'Déplacer vers aucune catégorie',
+    ARCHIVE: 'Archiver',
+    ARCHIVE_COLLECTION: 'Archiver l''album',
+    ARCHIVE_SECTION_NAME: 'Archiver',
+    ALL_SECTION_NAME: 'Tous',
+    MOVE_TO_COLLECTION: 'Déplacer vers l''album',
+    UNARCHIVE: 'Désarchiver',
+    UNARCHIVE_COLLECTION: 'Désarchiver l''album',
+    MOVE: 'Déplacer',
+    ADD: 'Ajouter',
+    SORT: 'Trier',
+    REMOVE: 'Retirer',
+    YES_REMOVE: 'Oui, retirer',
+    CONFIRM_REMOVE: 'Confirmer le retrait',
+    REMOVE_FROM_COLLECTION: 'Retirer de l''album',
+    TRASH: 'Corbeille',
+    MOVE_TO_TRASH: 'Déplacer vers la corbeille',
     TRASH_FILES_MESSAGE:
-        'Selected files will be removed from all albums and moved to trash.',
+        'Les fichiers sélectionnés seront retirés de tous les albums puis déplacés dans la corbeille.',
     TRASH_FILE_MESSAGE:
-        'The file will be removed from all albums and moved to trash.',
-    DELETE_PERMANENTLY: 'Delete permanently',
-    RESTORE: 'Restore',
-    CONFIRM_RESTORE: 'Confirm restoration',
-    RESTORE_MESSAGE: 'Restore selected files ?',
-    RESTORE_TO_COLLECTION: 'Restore to album',
-    EMPTY_TRASH: 'Empty trash',
-    EMPTY_TRASH_TITLE: 'Empty trash?',
+        'Le fichier sera retiré de tous les albums puis déplacé dans la corbeille.',
+    DELETE_PERMANENTLY: 'Supprimer définitivement',
+    RESTORE: 'Restaurer',
+    CONFIRM_RESTORE: 'Confirmer la restauration',
+    RESTORE_MESSAGE: 'Restaurer les fichiers sélectionnés ?',
+    RESTORE_TO_COLLECTION: 'Restaurer vers l''album',
+    EMPTY_TRASH: 'Corbeille vide',
+    EMPTY_TRASH_TITLE: 'Corbeille vide?',
     EMPTY_TRASH_MESSAGE:
-        'These files will be permanently deleted from your ente account.',
-    LEAVE_SHARED_ALBUM: 'Yes, leave',
-    LEAVE_ALBUM: 'Leave album',
-    LEAVE_SHARED_ALBUM_TITLE: 'Leave shared album?',
-    LEAVE_SHARED_ALBUM_FAILED: 'failed to leave the album, please try again',
+        'Ces fichiers seront définitivement supprimés de votre compte ente.',
+    LEAVE_SHARED_ALBUM: 'Oui, quitter',
+    LEAVE_ALBUM: 'Quitter l''album',
+    LEAVE_SHARED_ALBUM_TITLE: 'Quitter l''album partagé?',
+    LEAVE_SHARED_ALBUM_FAILED: 'Échec pour quitter l''album, veuillez réessayer',
     LEAVE_SHARED_ALBUM_MESSAGE:
-        'You will leave the album, and it will stop being visible to you.',
+        'Vous allez quitter cet album, il ne sera plus visible pour vous.',
     CONFIRM_SELF_REMOVE_MESSAGE: () => (
         <>
             <p>
-                Selected items will be removed from this album. Items which are
-                only in this album will be moved to Uncategorized.
+                Choisir les objets qui seront retirés de cet album. Ceux qui sont présents uniquement dans cet album seront déplacés comme hors catégorie.
             </p>
         </>
     ),
     CONFIRM_SELF_AND_OTHER_REMOVE_MESSAGE: () => (
         <>
             <p>
-                Some of the items you are removing were added by other people,
-                and you will lose access to them.
+                Certains des objets que vous êtes en train de retirer ont été ajoutés par d''autres personnes,
+                vous perdrez l''accès vers ces objets.
             </p>
         </>
     ),
 
-    SORT_BY_CREATION_TIME_ASCENDING: 'Oldest',
-    SORT_BY_CREATION_TIME_DESCENDING: 'Newest',
-    SORT_BY_UPDATION_TIME_DESCENDING: 'Last updated',
-    SORT_BY_NAME: 'Name',
-    COMPRESS_THUMBNAILS: 'Compress thumbnails',
-    THUMBNAIL_REPLACED: 'Thumbnails compressed',
-    FIX_THUMBNAIL: 'Compress',
-    FIX_THUMBNAIL_LATER: 'Compress later',
+    SORT_BY_CREATION_TIME_ASCENDING: 'Plus anciens',
+    SORT_BY_CREATION_TIME_DESCENDING: 'Plus récents',
+    SORT_BY_UPDATION_TIME_DESCENDING: 'Dernière mise à jour',
+    SORT_BY_NAME: 'Nom',
+    COMPRESS_THUMBNAILS: 'Compresser les miniatures',
+    THUMBNAIL_REPLACED: 'Les miniatures sont compressées',
+    FIX_THUMBNAIL: 'Compresser',
+    FIX_THUMBNAIL_LATER: 'Compresser plus tard',
     REPLACE_THUMBNAIL_NOT_STARTED: () => (
         <>
-            Some of your videos thumbnails can be compressed to save space.
-            would you like ente to compress them?
+            Certaines miniatures de vidéos peuvent être compressées pour gagner de la place.
+            Voulez-vous que ente les compresse?
         </>
     ),
     REPLACE_THUMBNAIL_COMPLETED: () => (
-        <>Successfully compressed all thumbnails</>
+        <>Toutes les miniatures ont été compressées</>
     ),
     REPLACE_THUMBNAIL_NOOP: () => (
-        <>You have no thumbnails that can be compressed further</>
+        <>Vous n''avez aucune miniature qui peut être encore plus compressée</>
     ),
     REPLACE_THUMBNAIL_COMPLETED_WITH_ERROR: () => (
-        <>Could not compress some of your thumbnails, please retry</>
+        <>Impossible de compresser certaines miniatures, veuillez réessayer</>
     ),
-    FIX_CREATION_TIME: 'Fix time',
-    FIX_CREATION_TIME_IN_PROGRESS: 'Fixing time',
-    CREATION_TIME_UPDATED: `File time updated`,
+    FIX_CREATION_TIME: 'Réajuster l''heure',
+    FIX_CREATION_TIME_IN_PROGRESS: 'Réajustement de l''heure',
+    CREATION_TIME_UPDATED: `L''heure du fichier a été réajustée`,
 
     UPDATE_CREATION_TIME_NOT_STARTED: () => (
-        <>Select the option you want to use</>
+        <>Sélectionnez l''option que vous souhaitez utiliser</>
     ),
-    UPDATE_CREATION_TIME_COMPLETED: () => <>Successfully updated all files</>,
+    UPDATE_CREATION_TIME_COMPLETED: () => <>Mise à jour effectuée pour tous les fichiers</>,
 
     UPDATE_CREATION_TIME_COMPLETED_WITH_ERROR: () => (
-        <>File time updation failed for some files, please retry</>
+        <>L''heure du fichier n''a pas été mise à jour pour certains fichiers, veuillez réessayer</>
     ),
-    FILE_NAME_CHARACTER_LIMIT: '100 characters max',
-    CAPTION_CHARACTER_LIMIT: '5000 characters max',
+    FILE_NAME_CHARACTER_LIMIT: '100 caractères max',
+    CAPTION_CHARACTER_LIMIT: '5000 caractères max',
 
     DATE_TIME_ORIGINAL: 'EXIF:DateTimeOriginal',
     DATE_TIME_DIGITIZED: 'EXIF:DateTimeDigitized',
-    CUSTOM_TIME: 'Custom time',
-    REOPEN_PLAN_SELECTOR_MODAL: 'Re-open plans',
-    OPEN_PLAN_SELECTOR_MODAL_FAILED: 'Failed to open plans',
-    COMMENT: 'Comment',
+    CUSTOM_TIME: 'Heure personnalisée',
+    REOPEN_PLAN_SELECTOR_MODAL: 'Rouvrir les plans',
+    OPEN_PLAN_SELECTOR_MODAL_FAILED: 'Échec pour rouvrir les plans',
+    COMMENT: 'Commentaire',
     ABUSE_REPORT_DESCRIPTION:
-        'Submitting this report will notify the album owner.',
+        'Soumettre ce rapport notifiera le propriétaire de l''album.',
     OTHER_REASON_REQUIRES_COMMENTS:
-        'Reason = other, require  a mandatory comment ',
-    REPORT_SUBMIT_SUCCESS_CONTENT: 'Your report has been submitted',
-    REPORT_SUBMIT_SUCCESS_TITLE: 'Report sent',
-    REPORT_SUBMIT_FAILED: 'Failed to sent report, try again',
-    INSTALL: 'Install',
-    ALBUM_URL: 'Album url',
-    PUBLIC_SHARING: 'Public link',
-    SHARING_DETAILS: 'Sharing details',
-    MODIFY_SHARING: 'Modify sharing',
-    NOT_FOUND: '404 - not found',
-    LINK_EXPIRED: 'Link expired',
-    LINK_EXPIRED_MESSAGE: 'This link has either expired or been disabled!',
-    MANAGE_LINK: 'Manage link',
-    LINK_TOO_MANY_REQUESTS: 'This album is too popular for us to handle!',
-    DISABLE_PUBLIC_SHARING: 'Disable public sharing',
+        'Raison = autre, nécessite un commentaire obligatoire ',
+    REPORT_SUBMIT_SUCCESS_CONTENT: 'Votre commentaire a été soumis',
+    REPORT_SUBMIT_SUCCESS_TITLE: 'Commentaire envoyé',
+    REPORT_SUBMIT_FAILED: 'Échec lors de l''envoi du commentaire, veuillez réessayer',
+    INSTALL: 'Installer',
+    ALBUM_URL: 'Lien de l''album',
+    PUBLIC_SHARING: 'Lien public',
+    SHARING_DETAILS: 'Détails du partage',
+    MODIFY_SHARING: 'Modifier le partage',
+    NOT_FOUND: '404 - non trouvé',
+    LINK_EXPIRED: 'Lien expiré',
+    LINK_EXPIRED_MESSAGE: 'Ce lien à soit expiré soit est supprimé!',
+    MANAGE_LINK: 'Gérer le lien',
+    LINK_TOO_MANY_REQUESTS: 'Cet album est trop populaire pour que nous puissions le gérer!',
+    DISABLE_PUBLIC_SHARING: 'Désactiver le partage public',
     DISABLE_PUBLIC_SHARING_MESSAGE:
-        'Are you sure you want to disable public sharing?',
-    FILE_DOWNLOAD: 'Allow downloads',
-    LINK_PASSWORD_LOCK: 'Password lock',
-    PUBLIC_COLLECT: 'Allow adding photos',
-    LINK_DEVICE_LIMIT: 'Device limit',
-    LINK_EXPIRY: 'Link expiry',
-    LINK_EXPIRY_NEVER: 'Never',
-    DISABLE_FILE_DOWNLOAD: 'Disable download',
+        'Êtes-vous certains de vouloir désactiver le lien public?',
+    FILE_DOWNLOAD: 'Autoriser les téléchargements',
+    LINK_PASSWORD_LOCK: 'Verrou par mot de passe',
+    PUBLIC_COLLECT: 'Autoriser l''ajout de photos',
+    LINK_DEVICE_LIMIT: 'Limite d''appareil',
+    LINK_EXPIRY: 'Expiration du lien',
+    LINK_EXPIRY_NEVER: 'Jamais',
+    DISABLE_FILE_DOWNLOAD: 'Désactiver le téléchargement',
     DISABLE_FILE_DOWNLOAD_MESSAGE: () => (
         <>
             <p>
-                Are you sure that you want to disable the download button for
-                files?{' '}
+                Êtes-vous certains de vouloir désactiver le bouton de téléchargement pour les fichiers
+                ?{' '}
             </p>{' '}
             <p>
-                Viewers can still take screenshots or save a copy of your photos
-                using external tools{' '}
+                Ceux qui les visualisent pourront tout de même prendre des imprim-écrans ou sauvegarder une copie de vos photos en utilisant des outils externes
+                {' '}
             </p>
         </>
     ),
-    ABUSE_REPORT: 'Abuse report',
-    ABUSE_REPORT_BUTTON_TEXT: 'Report abuse?',
-    MALICIOUS_CONTENT: 'Contains malicious content',
+    ABUSE_REPORT: 'Signaler un abus',
+    ABUSE_REPORT_BUTTON_TEXT: 'Signaler un abus?',
+    MALICIOUS_CONTENT: 'Contient du contenu malveillant',
     COPYRIGHT:
-        'Infringes on the copyright of someone I am authorized to represent',
-    ENTER_EMAIL_ADDRESS: 'Email*',
-    SELECT_REASON: 'Select a reason*',
-    ENTER_FULL_NAME: 'Full name*',
+        'Enfreint les droits d''une personne que je réprésente',
+    ENTER_EMAIL_ADDRESS: 'E-mail*',
+    SELECT_REASON: 'Choisir une raison*',
+    ENTER_FULL_NAME: 'Nom*',
     ENTER_DIGITAL_SIGNATURE:
-        'Typing your full name in this box will act as your digital signature*',
-    ENTER_ON_BEHALF_OF: 'I am reporting on behalf of*',
-    ENTER_ADDRESS: 'Address*',
-    ENTER_JOB_TITLE: 'Job title*',
-    ENTER_CITY: 'City*',
-    ENTER_PHONE: 'Phone number*',
+        'Saisir votre nom complet dans la case vaudra pour signature numérique*',
+    ENTER_ON_BEHALF_OF: 'Je rends compte au nom de*',
+    ENTER_ADDRESS: 'Adresse*',
+    ENTER_JOB_TITLE: 'Type d''emploi*',
+    ENTER_CITY: 'Ville*',
+    ENTER_PHONE: 'Num de téléphone*',
 
-    ENTER_STATE: 'State*',
-    ENTER_POSTAL_CODE: 'Zip/postal code*',
-    ENTER_COUNTRY: 'Country*',
+    ENTER_STATE: 'État*',
+    ENTER_POSTAL_CODE: 'Zip/Code postal*',
+    ENTER_COUNTRY: 'Pays*',
     JUDICIAL_DESCRIPTION: () => (
         <>
-            By checking the following boxes, I state{' '}
-            <strong>UNDER PENALTY OF PERJURY </strong>of law that:
+            En cliquant dans les cases suivantes, je déclare{' '}
+            <strong>SOUS PEINE DE FAUX TEMOIGNAGE </strong>aux yeux de la loi que:
         </>
     ),
-    TERM_1: 'I hereby state that I have a good faith belief that the sharing of copyrighted material at the location above is not authorized by the copyright owner, its agent, or the law (e.g., as a fair use). ',
-    TERM_2: 'I hereby state that the information in this Notice is accurate and, under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the copyright or of an exclusive right under the copyright that is allegedly infringed. ',
-    TERM_3: 'I acknowledge that any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability for damages. ',
-    SHARED_USING: 'Shared using ',
+    TERM_1: 'Je déclare par la présente être de bonne foi quant au partage de ressources protégés par des droits d''auteur n''est pas autorisé à l''emplacement ci-dessus par le titulaire du droit d''auteur, son agent ou la loi (par exemple, en tant qu''utilisation équitable). ',
+    TERM_2: 'Je déclare par la présente que les informations contenues dans cet avis sont exactes et, sous peine de faux témoignage, que j''en suis le propriétaire, ou autorisé à agir au nom du propriétaire, du droit d''auteur ou d''un droit exclusif au titre du droit d''auteur qui est prétendument violé. ',
+    TERM_3: 'Je reconnais que toute personne qui, sciemment, déforme matériellement que les ressources ou l''activité enfreinte peut être tenue responsable des dommages. ',
+    SHARED_USING: 'Partager en utilisant ',
     ENTE_IO: 'ente.io',
     LIVE: 'LIVE',
-    DISABLE_PASSWORD: 'Disable password lock',
+    DISABLE_PASSWORD: 'Désactiver le verrou par mot de passe',
     DISABLE_PASSWORD_MESSAGE:
-        'Are you sure that you want to disable the password lock?',
-    PASSWORD_LOCK: 'Password lock',
-    LOCK: 'Lock',
-    DOWNLOAD_UPLOAD_LOGS: 'Debug logs',
-    CHOOSE_UPLOAD_TYPE: 'Upload',
-    UPLOAD_FILES: 'File',
-    UPLOAD_DIRS: 'Folder',
+        'Êtes-vous certains de vouloir désactiver le verrou par mot de passe?',
+    PASSWORD_LOCK: 'Mot de passe verrou',
+    LOCK: 'Verrouiller',
+    DOWNLOAD_UPLOAD_LOGS: 'Journaux de débugs',
+    CHOOSE_UPLOAD_TYPE: 'Charger',
+    UPLOAD_FILES: 'Fichier',
+    UPLOAD_DIRS: 'Dossier',
     UPLOAD_GOOGLE_TAKEOUT: 'Google takeout',
-    CANCEL_UPLOADS: 'Cancel uploads',
-    DEDUPLICATE_FILES: 'Deduplicate files',
-    NO_DUPLICATES_FOUND: "You've no duplicate files that can be cleared",
+    CANCEL_UPLOADS: 'Annuler les chargements',
+    DEDUPLICATE_FILES: 'Déduplication de fichiers',
+    NO_DUPLICATES_FOUND: "Vous n''avez aucun fichier dédupliqué pouvant être nettoyé",
     CLUB_BY_CAPTURE_TIME: 'Club by capture time',
-    FILES: 'Files',
-    EACH: 'Each',
+    FILES: 'Fichiers',
+    EACH: 'Chacun',
     DEDUPLICATION_LOGIC_MESSAGE: (captureTime: boolean) => (
         <>
-            The following files were clubbed based on their sizes
-            {captureTime && ' and capture time'}, please review and delete items
-            you believe are duplicates{' '}
+            Les fichiers suivants ont été clubbed, basé sur leurs tailles
+            {captureTime && ' and capture time'}, veuillez corriger et supprimer les objets
+            que vous pensez être dupliqués{' '}
         </>
     ),
     STOP_ALL_UPLOADS_MESSAGE:
-        'Are you sure that you want to stop all the uploads in progress?',
-    STOP_UPLOADS_HEADER: 'Stop uploads?',
-    YES_STOP_UPLOADS: 'Yes, stop uploads',
+        'Êtes-vous certains de vouloir arrêter tous les chargements en cours?',
+    STOP_UPLOADS_HEADER: 'Arrêter les chargements?',
+    YES_STOP_UPLOADS: 'Oui, arrêter tout',
     ALBUMS: 'Albums',
-    NEW: 'New',
-    VIEW_ALL_ALBUMS: 'View all Albums',
-    ALL_ALBUMS: 'All Albums',
+    NEW: 'Nouveau',
+    VIEW_ALL_ALBUMS: 'Voir tous les albums',
+    ALL_ALBUMS: 'Tous les albums',
     ENDS: 'Ends',
-    ENTER_TWO_FACTOR_OTP: 'Enter the 6-digit code from your authenticator app.',
-    CREATE_ACCOUNT: 'Create account',
-    COPIED: 'Copied',
-    CANVAS_BLOCKED_TITLE: 'Unable to generate thumbnail',
+    ENTER_TWO_FACTOR_OTP: 'Saisir le code à 6 caractères de votre appli d''authentification.',
+    CREATE_ACCOUNT: 'Créer un compte',
+    COPIED: 'Copieé',
+    CANVAS_BLOCKED_TITLE: 'Impossible de créer une miniature',
     CANVAS_BLOCKED_MESSAGE: () => (
         <>
             <p>
-                It looks like your browser has disabled access to canvas, which
-                is necessary to generate thumbnails for your photos
+                Il semblerait que votre navigateur ait désactivé l''accès au canevas, qui est nécessaire
+                pour créer les miniatures de vos photos
             </p>
             <p>
-                Please enable access to your browser's canvas, or check out our
-                desktop app
+                Veuillez activer l''accès au canevas du navigateur, ou consulter notre appli pour ordinateur
+                
             </p>
         </>
     ),
-    WATCH_FOLDERS: 'Watch folders',
-    UPGRADE_NOW: 'Upgrade now',
-    RENEW_NOW: 'Renew now',
-    STORAGE: 'Storage',
-    USED: 'used',
-    YOU: 'You',
-    FAMILY: 'Family',
-    FREE: 'free',
-    OF: 'of',
-    WATCHED_FOLDERS: 'Watched folders',
-    NO_FOLDERS_ADDED: 'No folders added yet!',
+    WATCH_FOLDERS: 'Voir les dossiers',
+    UPGRADE_NOW: 'Mettre à niveau maintenant',
+    RENEW_NOW: 'Renouveler maintenant',
+    STORAGE: 'Stockage',
+    USED: 'utilisé',
+    YOU: 'Vous',
+    FAMILY: 'Famille',
+    FREE: 'gratuit',
+    OF: 'de',
+    WATCHED_FOLDERS: 'Voir les dossiers',
+    NO_FOLDERS_ADDED: 'Aucun dossiers d''ajouté!',
     FOLDERS_AUTOMATICALLY_MONITORED:
-        'The folders you add here will monitored to automatically',
-    UPLOAD_NEW_FILES_TO_ENTE: 'Upload new files to ente',
-    REMOVE_DELETED_FILES_FROM_ENTE: 'Remove deleted files from ente',
-    ADD_FOLDER: 'Add folder',
-    STOP_WATCHING: 'Stop watching',
-    STOP_WATCHING_FOLDER: 'Stop watching folder?',
+        'Les dossiers que vous ajoutez ici seront supervisés automatiquement',
+    UPLOAD_NEW_FILES_TO_ENTE: 'Charger de nouveaux fichiers sur ente',
+    REMOVE_DELETED_FILES_FROM_ENTE: 'Retirer de ente les fichiers supprimés',
+    ADD_FOLDER: 'Ajouter un dossier',
+    STOP_WATCHING: 'Arrêter de voir',
+    STOP_WATCHING_FOLDER: 'Arrêter de voir le dossier?',
     STOP_WATCHING_DIALOG_MESSAGE:
-        'Your existing files will not be deleted, but ente will stop automatically updating the linked ente album on changes in this folder.',
-    YES_STOP: 'Yes, stop',
+        'Vos fichiers existants ne seront pas supprimés, mais ente arrêtera automatiquement de mettre à jour le lien de l''album à chaque changements sur ce dossier.',
+    YES_STOP: 'Oui, arrêter',
     MONTH_SHORT: 'mo',
-    YEAR: 'year',
-    FAMILY_PLAN: 'Family plan',
-    DOWNLOAD_LOGS: 'Download logs',
+    YEAR: 'année',
+    FAMILY_PLAN: 'Plan famille',
+    DOWNLOAD_LOGS: 'Journaux de téléchargements',
     DOWNLOAD_LOGS_MESSAGE: () => (
         <>
             <p>
-                This will download debug logs, which you can email to us to help
-                debug your issue.
+                Cela va télécharger les journaux de débug, que vous pourrez nosu envoyer par e-mail pour nous aider à résoudre votre problàme
+                .
             </p>
             <p>
-                Please note that file names will be included to help track
-                issues with specific files.
+                Veuillez noter que les noms de fichiers seront inclus
+                .
             </p>
         </>
     ),
-    CHANGE_FOLDER: 'Change Folder',
-    TWO_MONTHS_FREE: 'Get 2 months free on yearly plans',
-    GB: 'GB',
-    POPULAR: 'Popular',
-    FREE_PLAN_OPTION_LABEL: 'Continue with free trial',
-    FREE_PLAN_DESCRIPTION: '1 GB for 1 year',
+    CHANGE_FOLDER: 'Modifier le dossier',
+    TWO_MONTHS_FREE: 'Obtenir 2 mois gratuits sur les plans annuels',
+    GB: 'Go',
+    POPULAR: 'Populaire',
+    FREE_PLAN_OPTION_LABEL: 'Poursuivre avec la version d''essai gratuite',
+    FREE_PLAN_DESCRIPTION: '1 Go pour 1 an',
     CURRENT_USAGE: (usage) => (
         <>
-            Current usage is <strong>{usage}</strong>
+            L''utilisation actuelle est de <strong>{usage}</strong>
         </>
     ),
     WEAK_DEVICE:
-        "The web browser you're using is not powerful enough to encrypt your photos. Please try to log in to ente on your computer, or download the ente mobile/desktop app.",
-    DRAG_AND_DROP_HINT: 'Or drag and drop into the ente window',
+        "Le navigateur que vous utilisez n''est pas assez puissant pour crypter vos photos. Veuillez essayer de vous connecter à ente sur votre ordinateur, ou télécharger l'appli ente mobile/ordinateur.",
+    DRAG_AND_DROP_HINT: 'Sinon glissez déposez dans la fenêtre ente',
     ASK_FOR_FEEDBACK: (
         <>
-            <p>We'll be sorry to see you go. Are you facing some issue?</p>
+            <p>Nous serrions navré de vous voir partir. Avez-vous rencontré des problèmes?</p>
             <p>
-                Please write to us at{' '}
+                Veuillez nous écrire à{' '}
                 <Link href="mailto:feedback@ente.io">feedback@ente.io</Link>,
-                maybe there is a way we can help.
+                nous pouvons peut-être vous aider.
             </p>
         </>
     ),
-    SEND_FEEDBACK: 'Yes, send feedback',
+    SEND_FEEDBACK: 'Oui, envoyer un commentaire',
     CONFIRM_ACCOUNT_DELETION_TITLE:
-        'Are you sure you want to delete your account?',
+        'Êtes-vous certains de vouloir supprimer votre compte?',
     CONFIRM_ACCOUNT_DELETION_MESSAGE: (
         <>
             <p>
-                Your uploaded data will be scheduled for deletion, and your
-                account will be permanently deleted.
+                Vos données chargées seront programmées pour suppression, et votre comptre sera supprimé définitivement
+                .
             </p>
-            <p>This action is not reversible.</p>
+            <p>Cette action n''est pas reversible.</p>
         </>
     ),
-    AUTHENTICATE: 'Authenticate',
-    UPLOADED_TO_SINGLE_COLLECTION: 'Uploaded to single collection',
-    UPLOADED_TO_SEPARATE_COLLECTIONS: 'Uploaded to separate collections',
-    NEVERMIND: 'Nevermind',
-    UPDATE_AVAILABLE: 'Update available',
+    AUTHENTICATE: 'Authentification',
+    UPLOADED_TO_SINGLE_COLLECTION: 'Chargé dans une seule collection',
+    UPLOADED_TO_SEPARATE_COLLECTIONS: 'Chargé dans des collections séparées',
+    NEVERMIND: 'Peu-importe',
+    UPDATE_AVAILABLE: 'Une mise à jour est disponible',
     UPDATE_INSTALLABLE_MESSAGE:
-        'A new version of ente is ready to be installed.',
-    INSTALL_NOW: `Install now`,
-    INSTALL_ON_NEXT_LAUNCH: 'Install on next launch',
+        'Une nouvelle version de ente est prête à être installée.',
+    INSTALL_NOW: `Installer maintenant`,
+    INSTALL_ON_NEXT_LAUNCH: 'Installer au prochain démarrage',
     UPDATE_AVAILABLE_MESSAGE:
-        'A new version of ente has been released, but it cannot be automatically downloaded and installed.',
-    DOWNLOAD_AND_INSTALL: 'Download and install',
-    IGNORE_THIS_VERSION: 'Ignore this version',
-    TODAY: 'Today',
-    YESTERDAY: 'Yesterday',
-    AT: 'at',
-    NAME_PLACEHOLDER: 'Name...',
+        'Une nouvelle version de ente est sortie, mais elle ne peut pas être automatiquement téléchargée puis installée.',
+    DOWNLOAD_AND_INSTALL: 'Télécharger et installer',
+    IGNORE_THIS_VERSION: 'Ignorer cette version',
+    TODAY: 'Aujourd''ui',
+    YESTERDAY: 'Hier',
+    AT: 'à',
+    NAME_PLACEHOLDER: 'Nom...',
     ROOT_LEVEL_FILE_WITH_FOLDER_NOT_ALLOWED:
-        'Cannot create albums from file/folder mix',
+        'Impossible de créer des albums depuis un mix fichier/dossier',
     ROOT_LEVEL_FILE_WITH_FOLDER_NOT_ALLOWED_MESSAGE: () => (
         <>
-            <p>You have dragged and dropped a mixture of files and folders.</p>
+            <p>Vous avez glissé déposé un mélange de fichiers et dossiers.</p>
             <p>
-                Please provide either only files, or only folders when selecting
-                option to create separate albums
+                Veuillez sélectionner soit uniquement des fichiers, ou des dossiers lors du choix d''options pour créer des albums séparés
+                
             </p>
         </>
     ),
     ADD_X_PHOTOS: (x: number) => `Add ${x} ${x > 1 ? 'photos' : 'photo'}`,
-    CHOSE_THEME: 'Choose theme',
-    YOURS: 'yours',
+    CHOSE_THEME: 'Choisir un thème',
+    YOURS: 'Le vôtre',
 };
 
-export default englishConstants;
+export default frenchConstants;
